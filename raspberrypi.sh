@@ -82,19 +82,19 @@ case "$1" in
                 ;;
         sdcardfree)
                 # free Diskspace in Byte
-                df -P -B1| grep /dev/root | tr -s " " | cut -d " " -f 4
+                df -P -B1| grep -w / | tr -s " " | cut -d " " -f 4
                 ;;
         sdcardtotalsize)
                 # Size of SD-Card in Byte
-                df -P -B1 | grep /dev/root | tr -s " " | cut -d " " -f 2
+                df -P -B1 | grep -w / | tr -s " " | cut -d " " -f 2
                 ;;
         sdcardusedpercent)
                 # Used Diskspace in Percent
-                df -P -B1| grep /dev/root | tr -s " " | cut -d " " -f 5 | tr -d "%"
+                df -P -B1| grep -w / | tr -s " " | cut -d " " -f 5 | tr -d "%"
                 ;;
         sdcardused)
                 # Used Diskspace in Byte
-                df -P -B1| grep /dev/root | tr -s " " | cut -d " " -f 3
+                df -P -B1| grep -w / | tr -s " " | cut -d " " -f 3
                 ;;
         corevoltage)
                 # sdram_c Voltage in Volt
