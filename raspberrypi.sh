@@ -14,8 +14,9 @@ case "$1" in
                 ;;
         boardversion)
                 # get the Hardware Version
-                cat /proc/cpuinfo | grep Hardware | tr -d " " | cut -d ":" -f 2
-                ;;
+		# cat /proc/cpuinfo | grep Hardware | tr -d " " | cut -d ":" -f 2
+                cat /proc/cpuinfo | grep Model |  cut -d ":"
+		;;
         coreclock)
                 # Core Clock Speed in Hz
                 /usr/bin/vcgencmd measure_clock core | sed s/"frequency(1)="//g
