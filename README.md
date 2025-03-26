@@ -1,4 +1,41 @@
 # zabbix-agent-on-RasPi
+
+Install Zabbix
+
+Install and configure Zabbix for your platform
+
+a. Install Zabbix repository
+Documentation
+```
+wget https://repo.zabbix.com/zabbix/7.0/raspbian/pool/main/z/zabbix-release/zabbix-release_latest_7.0+debian12_all.deb
+sudo dpkg -i zabbix-release_latest_7.0+debian12_all.deb
+sudo apt update
+```
+b. Install Zabbix agent 2
+Install zabbix-agent2 package.
+```
+sudo apt install zabbix-agent2
+```
+c. Install Zabbix agent 2 plugins
+Documentation
+You may want to install Zabbix agent 2 plugins.
+```
+sudo apt install zabbix-agent2-plugin-mongodb zabbix-agent2-plugin-mssql zabbix-agent2-plugin-postgresql
+```
+
+d. edit Zabbgix agent config
+```
+sudo nano /etc/zabbix/
+```
+
+e. Start Zabbix agent 2 process
+Start Zabbix agent 2 process and make it start at system boot.
+```
+sudo systemctl restart zabbix-agent2
+sudo systemctl enable zabbix-agent2
+```
+
+
 Script and template for zabbix-agent to run on raspberryPi.
 I assume you already installed zabbix-agent
 `sudo apt install zabbix-agent`
