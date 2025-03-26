@@ -5,7 +5,7 @@ I assume you already installed zabbix-agent
 
 Fetch script from GitHub:
 ```
-wget https://raw.githubusercontent.com/bobbolous/zabbix-agent-on-RasPi/master/raspberrypi.sh
+wget https://raw.githubusercontent.com/thuer-it/zabbix-agent-on-RasPi/master/raspberrypi.sh
 ```
 
 Create script location:
