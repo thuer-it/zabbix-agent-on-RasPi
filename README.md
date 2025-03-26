@@ -23,9 +23,9 @@ You may want to install Zabbix agent 2 plugins.
 sudo apt install zabbix-agent2-plugin-mongodb zabbix-agent2-plugin-mssql zabbix-agent2-plugin-postgresql
 ```
 
-d. edit Zabbgix agent config
+d. edit Zabbgix agent config - Server/Proxy IP and Hostname
 ```
-sudo nano /etc/zabbix/zabbix_agentd2.conf
+sudo nano /etc/zabbix/zabbix_agent2.conf
 ```
 
 e. Start Zabbix agent 2 process
@@ -73,7 +73,7 @@ $ /etc/zabbix/scripts/raspberrypi.sh temperature
 
 Add script to zabbix configuration file:
 ```
-sudo nano /etc/zabbix/zabbix_agentd2.conf
+sudo nano /etc/zabbix/zabbix_agent2.conf
 ```
 
 Adding the following line:
