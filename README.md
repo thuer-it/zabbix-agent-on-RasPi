@@ -25,7 +25,7 @@ sudo apt install zabbix-agent2-plugin-mongodb zabbix-agent2-plugin-mssql zabbix-
 
 d. edit Zabbgix agent config
 ```
-sudo nano /etc/zabbix/
+sudo nano /etc/zabbix/zabbix_agentd2.conf
 ```
 
 e. Start Zabbix agent 2 process
@@ -73,7 +73,7 @@ $ /etc/zabbix/scripts/raspberrypi.sh temperature
 
 Add script to zabbix configuration file:
 ```
-sudo nano /etc/zabbix/zabbix_agentd.conf
+sudo nano /etc/zabbix/zabbix_agentd2.conf
 ```
 
 Adding the following line:
@@ -83,7 +83,7 @@ UserParameter=raspberrypi.sh[*],/etc/zabbix/scripts/raspberrypi.sh $1
 
 Restart the zabbix agent:
 ```
-sudo service zabbix-agent restart
+sudo systemctl restart zabbix-agent2
 ```
 
 Import the Template in your Zabbix Server frontend.
