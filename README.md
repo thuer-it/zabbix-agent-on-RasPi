@@ -37,9 +37,6 @@ sudo systemctl enable zabbix-agent2
 
 
 Script and template for zabbix-agent to run on raspberryPi.
-I assume you already installed zabbix-agent
-`sudo apt install zabbix-agent`
-
 Fetch script from GitHub:
 ```
 wget https://raw.githubusercontent.com/thuer-it/zabbix-agent-on-RasPi/master/raspberrypi.sh
